@@ -1,10 +1,12 @@
 return {
+  {
   "nvim-tree/nvim-tree.lua",
   version = "*", -- Recommended to use stable releases
   lazy = false,  -- Tree should be available immediately
   dependencies = {
     "nvim-tree/nvim-web-devicons", -- Required for file icons
     "MunifTanjim/nui.nvim",
+    "nvim-lua/plenary.nvim",
   },
   config = function()
     -- RECOMMENDED: Disable netrw at the very start (prevents conflicts)
@@ -40,5 +42,8 @@ return {
     vim.keymap.set('n', '<leader>e', ':NvimTreeToggle<CR>', { desc = 'Toggle NvimTree', silent = true})
     vim.keymap.set('n', '<leader>ef', ':NvimTreeFocus<CR>', { desc = 'Focus NvimTree', silent = true })
   end,
-}
 
+  },
+
+  { "nvim-tree/nvim-web-devicons", opts = {} }
+}
