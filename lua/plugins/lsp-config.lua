@@ -34,6 +34,12 @@ return {
 		config = function()
 			local capabilities = require("cmp_nvim_lsp").default_capabilities()
 
+			vim.diagnostic.config({
+				virtual_text = true,
+				signs = true,
+				underline = true,
+			})
+
 			-- Global default capabilities
 			vim.lsp.config("*", {
 				capabilities = capabilities,
