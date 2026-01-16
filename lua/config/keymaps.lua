@@ -29,3 +29,8 @@ vim.keymap.set("n", "<A-k>", ":m .-2<CR>==", { silent = true })
 
 vim.keymap.set("v", "<A-j>", ":m '>+1<CR>gv=gv", { silent = true })
 vim.keymap.set("v", "<A-k>", ":m '<-2<CR>gv=gv", { silent = true })
+
+-- Save file
+
+vim.keymap.set({ "n", "i" }, "\\s", "<cmd>w<cr>", { desc = "Save File" })
+vim.keymap.set("n", "\\q", "<cmd>q<cr>", { desc = "Quit" })
