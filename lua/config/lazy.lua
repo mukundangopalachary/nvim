@@ -30,6 +30,7 @@ require("lazy").setup({
 	},
 })
 
+-- colorscheme
 vim.cmd.colorscheme("catppuccin")
 
 local builtin = require("telescope.builtin")
