@@ -15,6 +15,17 @@ if not (vim.uv or vim.loop).fs_stat(lazypath) then
 end
 vim.opt.rtp:prepend(lazypath)
 
+vim.api.nvim_create_autocmd("BufReadPost", {
+	pattern = "*.docx",
+	command = "silent %!pandoc --columns=78 -f docx -t markdown -",
+})
+
+-- Make the buffer writable if you want to edit the converted text
+vim.api.nvim_create_autocmd("BufReadPost", {
+	pattern = "*.docx",
+	command = "setlocal modifiable",
+})
+
 -- Make sure to setup `mapleader` and `maplocalleader` before
 -- loading lazy.nvim so that mappings are correct.
 -- This is also a good place to setup other settings (vim.opt)
@@ -28,10 +39,11 @@ require("lazy").setup({
 		-- import your plugins
 		{ import = "plugins" },
 	},
+	rocks = {
+		enabled = true,
+		hererocks = true,
+	},
 })
-
--- colorscheme
-vim.cmd.colorscheme("catppuccin")
 
 local builtin = require("telescope.builtin")
 vim.keymap.set("n", "<leader>ff", builtin.find_files, { desc = "Telescope find files" })
