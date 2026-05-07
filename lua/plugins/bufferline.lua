@@ -7,11 +7,34 @@ return {
 
 			require("bufferline").setup({
 				options = {
-					separator_style = "slant",
+					separator_style = "thin",
 					hover = {
 						enabled = true,
 						delay = 200,
 						reveal = { "close" },
+					},
+				},
+				highlights = {
+					fill = {
+						bg = "NONE",
+					},
+					background = {
+						bg = "NONE",
+					},
+					buffer_selected = {
+						bg = "#0b1b22",
+					},
+					separator = {
+						fg = "#1a2a33",
+						bg = "NONE",
+					},
+					separator_selected = {
+						fg = "#1a2a33",
+						bg = "#0b1b22",
+					},
+					separator_visible = {
+						fg = "#1a2a33",
+						bg = "NONE",
 					},
 				},
 			})

@@ -25,16 +25,50 @@ return {
 				},
 
 				view = {
-					width = 30,
+					width = 34,
 					relativenumber = true,
 				},
 
 				renderer = {
 					group_empty = true,
 					highlight_git = true,
+					highlight_opened_files = "name",
+					root_folder_label = false,
+					indent_markers = {
+						enable = true,
+					},
 
 					icons = {
 						webdev_colors = true, -- 🔥 REQUIRED for devicons
+						git_placement = "after",
+						modified_placement = "after",
+						padding = " ",
+						symlink_arrow = " -> ",
+						glyphs = {
+							default = "",
+							symlink = "",
+							bookmark = "󰆤",
+							modified = "●",
+							folder = {
+								arrow_closed = "",
+								arrow_open = "",
+								default = "",
+								open = "",
+								empty = "",
+								empty_open = "",
+								symlink = "",
+								symlink_open = "",
+							},
+							git = {
+								unstaged = "M",
+								staged = "S",
+								unmerged = "",
+								renamed = "R",
+								untracked = "U",
+								deleted = "D",
+								ignored = "",
+							},
+						},
 						show = {
 							file = true,
 							folder = true,
@@ -46,6 +80,12 @@ return {
 
 				filters = {
 					dotfiles = false,
+				},
+
+				actions = {
+					open_file = {
+						quit_on_open = false,
+					},
 				},
 			})
 
