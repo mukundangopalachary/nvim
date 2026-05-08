@@ -17,6 +17,7 @@ vim.keymap.set("n", "<leader>li", "<cmd>LspInfo<cr>", { desc = "Lsp Info UI" })
 vim.opt.guifont = "FiraCode Nerd Font:h12"
 vim.opt.clipboard = "unnamedplus"
 vim.opt.swapfile = false
+vim.opt.termguicolors = true
 
 -- for moving between windows
 vim.keymap.set("n", "<leader>h", "<C-w>h", { silent = true })
