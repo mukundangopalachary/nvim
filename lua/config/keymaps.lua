@@ -14,7 +14,8 @@ vim.cmd("nnoremap ,, :let @/ = ''<CR>:nohlsearch<CR>")
 vim.keymap.set("n", "<leader>ll", "<cmd>Lazy<cr>", { desc = "Lazy UI" })
 vim.keymap.set("n", "<leader>li", "<cmd>LspInfo<cr>", { desc = "Lsp Info UI" })
 
-vim.opt.guifont = "FiraCode Nerd Font:h12"
+vim.opt.guifont = "JetBrainsMono Nerd Font Medium:h12"
+vim.opt.guicursor = "n-v-c:block,i-ci-ve:ver25,r-cr:block,o:block"
 vim.opt.clipboard = "unnamedplus"
 vim.opt.swapfile = false
 vim.opt.termguicolors = true
