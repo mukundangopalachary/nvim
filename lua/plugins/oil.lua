@@ -12,6 +12,9 @@ return {
 			max_width = 80,
 			max_height = 20,
 			border = "rounded",
+			get_win_title = function()
+				return ""
+			end,
 			win_options = {
 				winblend = 0,
 			},
